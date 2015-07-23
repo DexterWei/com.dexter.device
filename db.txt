@@ -1,0 +1,8 @@
+db.Device.insert({"Manufacturer":"Haier",
+    "Model":"FRIDGE",
+    "SN":"cmpe273",
+    "Resource":[
+        {"Name":"Thermometer","Value":"NA","Observed":"N","Observer":""},
+        {"Name":"IceMaker","Value":"Off","Observed":"N","Observer":""}
+        ]
+    })
