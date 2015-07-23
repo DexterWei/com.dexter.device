@@ -45,7 +45,9 @@ public class ServerOnDevice {
 	@Produces(MediaType.TEXT_PLAIN)
 	public String discover(){
 		DeviceDAO.Connect();
-		return DeviceDAO.getDevice((BasicDBObject) new BasicDBObject().put("SN", "cmpe273")).toString();
+		DBObject rsc =  (DBObject) DeviceDAO.getDevice((BasicDBObject) new BasicDBObject().put("SN", "cmpe273")).get("Resource");
+		//rsc.removeField("_id");
+		return rsc.toString();
 	}
 	
 	@Path("/read/{rscname}")
